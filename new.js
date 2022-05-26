@@ -3,10 +3,9 @@ const { By } = require('selenium-webdriver');
 const assert = require('assert');
 const { sleep } = require('sleep');
 
-const user = process.env.BROWSERSTACK_USERNAME;
-const key = process.env.BROWSERSTACK_ACCESS_KEY;
-
-const buildname = process.env.BUILD_NAME;
+const username = process.env.BROWSERSTACK_USERNAME;
+const accessKey = process.env.BROWSERSTACK_ACCESS_KEY;
+const buildName = process.env.BROWSERSTACK_BUILD_NAME;
 
 // Input capabilities
 const capabilities = {
@@ -19,7 +18,7 @@ const capabilities = {
  'build': buildname // CI/CD job or build name
 }
 async function runTestWithCaps () {
-  let driver = new webdriver.Builder().usingServer(`https://user:key@hub-cloud.browserstack.com/wd/hub`).withCapabilities(capabilities).build();
+  let driver = new webdriver.Builder().usingServer(`https://username:accessKey@hub-cloud.browserstack.com/wd/hub`).withCapabilities(capabilities).build();
   try{
     await driver.get("https://bstackdemo.com/");
     await driver.wait(webdriver.until.titleMatches(/StackDemo/i), 10000);
