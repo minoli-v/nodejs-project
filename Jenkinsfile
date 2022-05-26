@@ -5,6 +5,8 @@ pipeline {
          steps {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
                echo "hello"
+               npm -v
+               node -v
             }
          }
       }
