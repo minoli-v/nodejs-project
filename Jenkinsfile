@@ -9,7 +9,8 @@ pipeline {
                echo "hello"
                sh 'npm install'
                sh 'npm install selenium-webdriver'
-               sh 'sleep 30'
+               sh 'export BROWSERSTACK_USERNAME=minolivartak_7NMHef && export BROWSERSTACK_ACCESS_KEY=7zERhse86fXgg5qz3cbr'
+               sh 'sleep 20'
                sh 'node new.js'
             }
          }
