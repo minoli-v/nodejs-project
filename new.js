@@ -14,11 +14,13 @@ const capabilities = {
  'browser_version' : '96.0',
  'os' : 'Windows',
  'name': 'BStack-[NodeJS] Sample Test', // test name
- 'build': buildName // CI/CD job or build name
+ 'build': buildName, // CI/CD job or build name
+ 'browserstack.user' : username,
+	'browserstack.key' : accessKey
 }
 async function runTestWithCaps () {
-  let driver = new webdriver.Builder().usingServer(`https://username:accessKey@hub-cloud.browserstack.com/wd/hub`).withCapabilities(capabilities).build();
-  try{
+ var driver = new webdriver.Builder().usingServer("https://hub.browserstack.com/wd/hub").withCapabilities(capabilities).build();
+ try{
     await driver.get("https://bstackdemo.com/");
     await driver.wait(webdriver.until.titleMatches(/StackDemo/i), 10000);
     // locating product on webpage
