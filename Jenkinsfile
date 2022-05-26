@@ -1,12 +1,12 @@
 pipeline {
    agent any
-   browserstack(credentialsId: '<browserstackCredentialsID>') {
-      stages {
-         stage('setup') {
-            steps {
-                npm install    
+   stages {
+      stage('setup') {
+         steps {
+            browserstack(credentialsId: '<browserstackCredentialsID>') {
+               npm install    
             }
-      }
+         }
       }
     }
   }
