@@ -14,7 +14,7 @@ const capabilities = {
  'browser_version' : '96.0',
  'os' : 'Windows',
  'name': 'BStack-[NodeJS] Sample Test', // test name
- 'build': buildname // CI/CD job or build name
+ 'build': buildName // CI/CD job or build name
 }
 async function runTestWithCaps () {
   let driver = new webdriver.Builder().usingServer(`https://username:accessKey@hub-cloud.browserstack.com/wd/hub`).withCapabilities(capabilities).build();
