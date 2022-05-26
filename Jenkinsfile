@@ -5,8 +5,7 @@ pipeline {
          steps {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
                echo "hello"
-               
-               node --version
+               node -v
             }
          }
       }
