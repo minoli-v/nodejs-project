@@ -5,7 +5,7 @@ const assert = require('assert');
 const username = process.env.BROWSERSTACK_USERNAME;
 const accessKey = process.env.BROWSERSTACK_ACCESS_KEY;
 const buildName = process.env.BROWSERSTACK_BUILD_NAME;
-
+ 
 // Input capabilities
 const capabilities = {
   'os_version' : '11',
