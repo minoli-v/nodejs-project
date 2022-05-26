@@ -1,11 +1,13 @@
 pipeline {
    agent any
+   tools {nodejs "node"}
+
    stages {
       stage('setup') {
          steps {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
                echo "hello"
-               node -v
+               sh 'npm -v'
             }
          }
       }
