@@ -1,6 +1,8 @@
-browserstack('75468084-077b-4275-b015-78f3cc736bd9') {
-    node {
-        echo 'hello'
-        npm install
-}    
+node("myAgent") {
+    timeout(unit: 'SECONDS', time: 5) {
+        stage("One"){
+            sleep 10
+            echo 'hello'
+        }
+    }
 }
