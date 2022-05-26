@@ -4,7 +4,7 @@ pipeline {
       stage('setup') {
          steps {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
-               npm install    
+               echo "hello"
             }
          }
       }
