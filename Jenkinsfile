@@ -7,7 +7,8 @@ pipeline {
          steps {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
                echo "hello"
-               sh 'npm -v'
+               sh 'npm install'
+               sh 'node new.js'
             }
          }
       }
