@@ -8,7 +8,8 @@ pipeline {
             browserstack(credentialsId: '<browserstackCredentialsID>') {
                echo "hello"
                sh 'npm install'
-               sh 'npm i selenium-webdriver-3'
+               sh 'npm install selenium-webdriver'
+               sh 'sleep 30'
                sh 'node new.js'
             }
          }
