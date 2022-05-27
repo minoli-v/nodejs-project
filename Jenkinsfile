@@ -9,7 +9,7 @@ pipeline {
                echo "hello"
                sh 'npm install'
                sh 'sleep 10'
-               sh 'node local.js'
+               sh 'node parallel.js'
             }
          }
       }
