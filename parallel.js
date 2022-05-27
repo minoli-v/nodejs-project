@@ -2,7 +2,7 @@ const webdriver = require('selenium-webdriver');
 const { By } = require('selenium-webdriver');
 const assert = require('assert');
 // Input capabilities
-var { parallelTestCapabilities, hubURL } = require('conf')
+var { parallelTestCapabilities, hubURL } = require('./conf')
 
 async function runTestWithCaps(capabilities) {
   let driver = new webdriver.Builder()
