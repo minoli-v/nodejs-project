@@ -8,8 +8,27 @@
   },
   "author": "",
   "license": "ISC",
-   "dependencies": {
-     "browserstack-local": "^1.4.8",
-     "selenium-webdriver": "3.1.0",
- }
+  "dependencies": {
+    "browserstack-local": "^1.4.8",
+    "selenium-webdriver": "3.1.0"
+  }
+}
+
+{
+  "name": "node-proj",
+  "version": "1.0.0",
+  "description": "Sample code repository to run selenium tests on browserstack using NodeJs",
+  "main": "new.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "single": "node new.js",
+    "local": "node local.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "3.1.0",
+    "browserstack-local": "^1.4.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
