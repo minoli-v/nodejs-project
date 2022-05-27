@@ -15,8 +15,9 @@ const capabilities = {
  'browserName' : 'iphone',
  'name': 'BStack-[NodeJS] Local Test', // test name
  'build': buildName,
-  'browserstack.user' : username,
-	'browserstack.key' : accessKey
+ 'browserstack.user' : username,
+ 'browserstack.key' : accessKey,
+'browserstack.local' : 'true',
   
   
 }
