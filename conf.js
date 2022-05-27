@@ -11,7 +11,7 @@ exports.singleTestCapabilities = {
   'os_version': '14.0',
   'browserName': 'iPhone',
   'name': 'BStack-[NodeJS] Sample Test', // test name
-  'build': 'browserstack-build-1', // CI/CD job or build name
+  'build': process.env.BROWSERSTACK_BUILD_NAME,
   ...userCredentials
 }
 
@@ -22,7 +22,7 @@ exports.localTestCapabilities = {
   'browserName': 'iPhone',
   'browserstack.local': 'true',
   'name': 'BStack-[NodeJS] Sample Test', // test name
-  'build': 'browserstack-build-1', // CI/CD job or build name
+  'build': process.env.BROWSERSTACK_BUILD_NAME,
   ...userCredentials
 }
 
