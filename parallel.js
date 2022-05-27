@@ -3,7 +3,10 @@
   const assert = require('assert');
 
   async function runTestWithCaps (capabilities) {
-    let driver = new webdriver.Builder().usingServer(`https://username:accessKey@hub.browserstack.com/wd/hub`).withCapabilities(capabilities).build();
+  var driver = new webdriver.Builder().
+    usingServer("https://hub-cloud.browserstack.com/wd/hub").
+    withCapabilities(capabilities).
+    build();    
     try{
       await driver.get("https://bstackdemo.com/");
       await driver.wait(webdriver.until.titleMatches(/StackDemo/i), 10000);
@@ -46,7 +49,9 @@ const buildName = process.env.BROWSERSTACK_BUILD_NAME;
   'browser_version': 'latest',
   'os': 'Windows',
   'build': buildName,
-  'name': 'Parallel test 1'
+  'name': 'Parallel test 1',
+    "browserstack.user" : username,
+	"browserstack.key" : accessKey
   },
   {
     'os_version': 'Monterey',
@@ -54,28 +59,36 @@ const buildName = process.env.BROWSERSTACK_BUILD_NAME;
     'browser_version': 'latest',
     'os': 'OS X',
     'build': buildName,
-    'name': 'Parallel test 2'
+    'name': 'Parallel test 2',
+    "browserstack.user" : username,
+	"browserstack.key" : accessKey
   },
   {
     'os_version' : 'Big Sur',
     'browserName' : 'Safari',
     'os' : 'OS X',
     'build': buildName,
-    'name': 'Parallel test 3'
+    'name': 'Parallel test 3',
+    "browserstack.user" : username,
+	"browserstack.key" : accessKey
   },
   {
     'browserName': 'Android',
     'device': 'Samsung Galaxy S20',
     'realMobile': 'true',
     'build': buildName,
-    'name': 'Parallel test 4'
+    'name': 'Parallel test 4',
+    "browserstack.user" : username,
+	"browserstack.key" : accessKey
   },
   {
     'browserName': 'iPhone',
     'device': 'iPhone 12 Pro Max',
     'realMobile': 'true',
     'build': buildName,
-    'name': 'Parallel test 5'
+    'name': 'Parallel test 5',
+    "browserstack.user" : username,
+	"browserstack.key" : accessKey
   }];
 
   // The following code runs the test function as many times the capabilities are defined
