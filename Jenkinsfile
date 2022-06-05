@@ -1,20 +1,14 @@
 pipeline {
     agent any
+    tools {nodejs "node"}
 
     stages {
-        stage('Build') {
+        stage('Setup and Run') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                browserstack(credentialsId: 83338aa0-2e7b-41dc-9d11-a5352b5b037e){
+                    sh 'npm install'
+                    sh 'node new.js'
+                }
             }
         }
     }
