@@ -9,6 +9,7 @@ pipeline {
                     echo 'Running single test'
                     sh 'node new.js'
                 }
+                 browserStackReportPublisher 'automate'
             }
         }
     }
