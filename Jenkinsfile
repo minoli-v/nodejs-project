@@ -10,6 +10,7 @@ pipeline {
                     sh 'node local.js'
                 }
             }
+              browserStackReportPublisher 'automate'
         }
     }
 }
