@@ -9,8 +9,8 @@ pipeline {
                     echo 'Running local test'
                     sh 'node local.js'
                 }
+                browserStackReportPublisher 'automate'
             }
-              browserStackReportPublisher 'automate'
         }
     }
 }
