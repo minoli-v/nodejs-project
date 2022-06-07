@@ -64,7 +64,7 @@ async function runTestWithCaps () {
     }
   }
 
-  stop the Local instance
+  //stop the Local instance
   bs_local.stop(function() {
       console.log("Stopped BrowserStackLocal");
   });
