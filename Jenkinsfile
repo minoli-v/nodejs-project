@@ -17,7 +17,7 @@ pipeline {
                     sh 'sleep 10'
 
                     sh 'npm install'
-                    sh 'node local.js'
+                    sh 'node localbin.js'
                     sh './BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop'
                 }
             }
