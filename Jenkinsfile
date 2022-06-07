@@ -11,6 +11,9 @@ pipeline {
 
                     sh '/opt/homebrew/bin/wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip"'
                     sh 'unzip BrowserStackLocal-darwin-x64.zip'
+                    sh 'sleep 5'
+                    sh './BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start'
+
                     sh 'sleep 10'
 
                     sh 'npm install'
