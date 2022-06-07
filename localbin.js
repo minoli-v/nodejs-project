@@ -6,6 +6,8 @@ const browserstack = require('browserstack-local');
 const username = process.env.BROWSERSTACK_USERNAME;
 const accessKey = process.env.BROWSERSTACK_ACCESS_KEY;
 const buildName = process.env.BROWSERSTACK_BUILD_NAME;
+const browserstackLocal = process.env.BROWSERSTACK_LOCAL;
+
 
 // Input capabilities
 const capabilities = {
@@ -18,7 +20,7 @@ const capabilities = {
  'build': buildName,
  'browserstack.user' : username,
  'browserstack.key' : accessKey,
- 'browserstack.local' : 'true',
+ 'browserstack.local' : browserstackLocal,
   
   
 }
