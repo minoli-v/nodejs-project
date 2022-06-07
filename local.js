@@ -21,16 +21,16 @@ const capabilities = {
   
   
 }
-//creates an instance of Local
-const bs_local = new browserstack.Local();
+// //creates an instance of Local
+// const bs_local = new browserstack.Local();
 
-const bs_local_args = { 'key': accessKey };
+// const bs_local_args = { 'key': accessKey };
 
-// starts the Local instance with the required arguments
-bs_local.start(bs_local_args, function() {
-  console.log("Started BrowserStackLocal");
-  runTestWithCaps(); 
-});
+// // starts the Local instance with the required arguments
+// bs_local.start(bs_local_args, function() {
+//   console.log("Started BrowserStackLocal");
+//   runTestWithCaps(); 
+// });
 
 async function runTestWithCaps () {
   let driver = new webdriver.Builder().usingServer("https://hub.browserstack.com/wd/hub").withCapabilities(capabilities).build();
@@ -64,7 +64,8 @@ async function runTestWithCaps () {
   }
 
   // stop the Local instance
-  bs_local.stop(function() {
-      console.log("Stopped BrowserStackLocal");
-  });
+//   bs_local.stop(function() {
+//       console.log("Stopped BrowserStackLocal");
+//   });
 }
+runTestWithCaps(); 
