@@ -5,6 +5,7 @@ pipeline {
         stage('Setup and Run') {
             steps {
                 browserstack(credentialsId: '83338aa0-2e7b-41dc-9d11-a5352b5b037e', localConfig: [localOptions: '', localPath: '']){
+                    sh 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
                     sh 'brew install wget'
                     sh 'wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip"'
                     sh 'unzip BrowserStackLocal-darwin-x64.zip'
