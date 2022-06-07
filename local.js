@@ -18,7 +18,7 @@ const capabilities = {
  'build': buildName,
  'browserstack.user' : username,
  'browserstack.key' : accessKey,
-'browserstack.local' : 'true',
+//'browserstack.local' : 'true',
   
   
 }
