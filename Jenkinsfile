@@ -21,3 +21,6 @@ pipeline {
                     sh './BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop'
                 }
             }
+        }
+    }
+}
