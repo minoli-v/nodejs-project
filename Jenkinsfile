@@ -9,7 +9,6 @@ pipeline {
                     sh 'npm install'
                     sh 'node local.js'
                 }
-                browserStackReportPublisher 'automate'
             }
         }
     }
