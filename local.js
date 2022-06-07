@@ -9,10 +9,11 @@ const buildName = process.env.BROWSERSTACK_BUILD_NAME;
 
 // Input capabilities
 const capabilities = {
- 'device' : 'iPhone 11 Pro Max',
- 'realMobile' : 'true',
- 'os_version' : '13',
- 'browserName' : 'iphone',
+ 'os_version' : '10',
+ 'resolution' : '1920x1080',
+ 'browserName' : 'Chrome',
+ 'browser_version' : 'latest',
+ 'os' : 'Windows',
  'name': 'BStack-[NodeJS] Local Test', // test name
  'build': buildName,
  'browserstack.user' : username,
