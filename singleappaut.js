@@ -9,7 +9,7 @@ buildName = process.env.BROWSERSTACK_BUILD_NAME;
 browserstackLocalIdentifier = process.env.BROWSERSTACK_LOCAL_IDENTIFIER
 app = process.env.BROWSERSTACK_APP_ID
 
-desired_caps = {
+desiredCaps = {
    "browserstack.user" : userName,
     "browserstack.key" : accessKey,
     "app" : app,
