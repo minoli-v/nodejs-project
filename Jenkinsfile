@@ -8,7 +8,7 @@ pipeline {
                      
                     sh 'curl -u "minolivartak_7NMHef:7zERhse86fXgg5qz3cbr" -X POST "https://api-cloud.browserstack.com/app-automate/upload" -F "file=@/Users/minolivartak/Downloads/WikipediaSample (10).apk"'
                      sh 'sleep 10'
-                      sh '$BROWSERSTACK_APP_ID' 
+                      sh 'echo $BROWSERSTACK_APP_ID' 
                       sh 'npm install'
                       sh 'npm install wd'
                       sh 'npm install assert'
