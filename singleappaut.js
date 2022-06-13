@@ -12,7 +12,7 @@ app = process.env.BROWSERSTACK_APP_ID
 desiredCaps = {
    "browserstack.user" : userName,
     "browserstack.key" : accessKey,
-    "app" : app,
+    "app" : 'bs://40192ef50f73f8fa0aa02b13c4af380c4d933caf',
     "build" : buildName,
     "device" : "Samsung Galaxy S8",
     "browserstack.local" : browserstackLocal,
